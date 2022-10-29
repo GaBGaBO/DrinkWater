@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<!-- ამის საშუალებით მიხვდება ბრაუზერი თუ რა ტიპის დოკუმენტთან აქვს საქმე, და რომ ეს არის ჰთმლ დოკუმენტი -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- მისი საშუალებით შეძლებს ბრაუზერი რო აღიქვას ყველა ენა და მათ შორის ქართულიც რაღა თქმა უნდა -->
+    <meta name="viewport" content="width=device-width initial-scale=1,0">
+    <!-- ხედვის ცენტრი იქმნება სადაც ისევე როგორც კომპზე ასევე ლეპტოპზეც დავინახავთ ანალოგიურად
+      თუმცა ასევე საჭიროა რესფონსივი :) :) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- ექნეაბა დოკუმენტს მხარდაჭერა IE8 da IE9 ისგანბრაუზერებისგან -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- ცსს ფაილია დაკავშირებული რითაც შევძლებთ მარქაფის გაკეთებას :)-->
+    <script src="Js1.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.19/marked.min.js" integrity="sha512-CPGsmz+2yVpGnri/iBEoPVrRHiPaHQ3gzuSCfmfnZ2KKF/GKMvW8S7uVFRbZD0uOVMaNYY4HCATeCShxZWgp6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--რეალურად იმიტომ გამო ვიყენებთ დეფერ ატრიბუტს სკრიპტ თეგში რომ ამ დროს სკრიპტი იტვირთება ბრაუზერში ჰთმლ დოკუმენტის
+    დარენდერებასთან ერთად მაგრამ მოქმედებაზე მხოლოდამხოლოდ მაშინ გადადის როდესაც ჰთმლ დოკუკემნტი დარენდერდება :)
+  წინააღმდეგ შემთხვევაში გვიწევს რომ სკრიპტი ჩავიტანოთ ელემენტების ქვევით ანდა წინააღმდეგ შემთხვევაში მოგვიწევს ავდგეთ და 
+ვინდოუ.ონლოად და ერროუ ფუნქციაში დავწეროთ ჩვენი სკრიპტი-->
+    <title>
+      Drink Water
+    </title>
+      <!-- თვითონ მშობელ კლასს რომელშიც არის მოთავსებული 
+      დანარჩენი კონტეინერი მას უნდა მივანიჭოთ პოზიცია რილეთივი
+  და იმისდამიხედვით გადაადგილდბეა ხოლო -->
+        <!-- მასში შემავალ დანარჩენ კლასებს უნდა მივანიჭოთ
+        აბსოლუტის ფორმა 
+      და  რასაც გადავაადგილებთ  და ვამოძრავებთ 
+    სწორედ ეგ უნდა იყოს აბსოლუტი-->
+    <!-- იდეაში ეგ რილეთივი არის რაღაც საზღვარი და სწორედ
+    იქ გადადგილებ ამ ჩვენს მოცემულ საგნებს -->
+  </head>
+  <body>
+    <h1>დალიე წყალი</h1>
+    <h3>მიზანი 2 ლიტრა</h3>
+    <div class="cup">
+      <div class="remained" id="remained">
+        <!-- რეალურად ვწერთ თუ რამდენი ლიტრაა, მაგ 1.5ლ
+        და ამაზე ცსს ით ვაკეთებთ მანიპულაციებს რომ
+      შემდეგ კი ამას წავშლით და ჯს თი დავამატებთ -->
+       <span id="liters"> <!-- 1.5 --></span>
+       <small>დარჩენილია</small>
+      </div>
+      <!-- ასევე აქ ვწერთ პროცენტებს და ამაზე ცსს ით
+      ვაკეთებთ ზომებს და ასე შემდეგ რომ გამზადებული იყოს
+    ჯავასკრიპტისთვის, და შემდეგ აქ ვშლით და ჯს დან დავამატებთ -->
+      <div class="percentage" id="percentage">
+        <!-- 20% -->
+      </div>
+    </div>
+    <p class="text">
+      აირჩიეთ რამდენი ჭიქა წყალი გაქვთ დალეული
+    </p>
+    <div class="cups">
+      <!-- აქაც რეალურად პირველ ორს ვაწერთ full 
+      გავაკეთებთ ცსს ით მანიპულაციას და შემდეგ უკვე
+    წავშლით და ჯს სთვის გავამზადებთმ-->
+    <!-- full -->
+      <div class="cup cup-small">250 მლ</div>  <!--რეალურად აქ უკვე ვაკეთებთ ჭიქის მოცულობას, და იქნება ის 250მილილიტრი-->
+      <div class="cup cup-small ">250 მლ</div>
+      <div class="cup cup-small ">250 მლ</div>
+      <div class="cup cup-small ">250 მლ</div>
+      <div class="cup cup-small ">250 მლ</div>
+      <div class="cup cup-small ">250 მლ</div>
+      <div class="cup cup-small ">250 მლ</div>
+      <div class="cup cup-small ">250 მლ</div>  
+    </div>
+  </body>
+</html>
